@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <center>
+    <header>
+        <h1>Movie Title</h1>
+        <nav>
+            <ul>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Movie Title</h2>
+            <p>Tagline or brief description of the movie.</p>
+        </section>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>Plot summary or information about the movie.</p>
+        </section>
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <section id="image-gallery">
+                <h3>Image Gallery</h3>
+                <!-- Image gallery content -->
+            </section>
+            <section id="video-gallery">
+                <h3>Video Gallery</h3>
+                <!-- Video gallery content -->
+            </section>
+        <section id="video">
+            <h2>Watch Trailer</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Movie Title. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.nav-link').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const target = document.querySelector(this.getAttribute('href'));
+
+                window.scrollTo({
+                    top: target.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</center>
+</body>
+</html>
